@@ -1,16 +1,51 @@
-# cubit_to_do
+# Flutter To Do App
 
-A new Flutter project.
+A simple To Do application built using Flutter and Cubit (flutter_bloc).
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Add Tasks
+- Delete Tasks
+- Edit Tasks
+- Complete Tasks
+- Auto UI Update using Cubit
+- Separate Pending & Completed Tasks
+- Empty State
+- Task Creation Date
+- Total Task Counter
 
-A few resources to get you started if this is your first Flutter project:
+## Architecture
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+lib/
+│
+├── cubit/
+├── models/
+├── screens/
+├── widgets/
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The application follows a simple Cubit architecture.
+
+UI
+↓
+Cubit
+↓
+State
+↓
+UI Rebuild
+
+## State Management
+
+flutter_bloc (Cubit)
+
+## Packages
+
+- flutter_bloc
+- intl
+
+## Application Flow
+
+1. User enters a task.
+2. Cubit creates a new TaskModel.
+3. Cubit emits a new state.
+4. BlocBuilder rebuilds automatically.
+5. User can edit, delete, or complete tasks.
